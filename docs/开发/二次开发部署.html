@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>二次开发部署 | DiscuzQ 安装文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        console.log("ready");
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && isChrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                var element_to_scroll_to = document.getElementById(decodeURI(hash.substr(1)));
+                element_to_scroll_to.scrollIntoView();
+            }, 300);
+        }
+      });
+</script>
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.1dac2540.css" as="style"><link rel="preload" href="/docs/assets/js/app.4a94bff3.js" as="script"><link rel="preload" href="/docs/assets/js/2.65b3c0ea.js" as="script"><link rel="preload" href="/docs/assets/js/1.93f47670.js" as="script"><link rel="preload" href="/docs/assets/js/48.a2893909.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.e303b1fe.js"><link rel="prefetch" href="/docs/assets/js/11.caa9adf9.js"><link rel="prefetch" href="/docs/assets/js/12.f47f63d5.js"><link rel="prefetch" href="/docs/assets/js/13.93dc81ea.js"><link rel="prefetch" href="/docs/assets/js/14.704d1a26.js"><link rel="prefetch" href="/docs/assets/js/15.2330e6dc.js"><link rel="prefetch" href="/docs/assets/js/16.6aaa40a5.js"><link rel="prefetch" href="/docs/assets/js/17.e32a5229.js"><link rel="prefetch" href="/docs/assets/js/18.1fa05986.js"><link rel="prefetch" href="/docs/assets/js/19.53f57844.js"><link rel="prefetch" href="/docs/assets/js/20.864577f6.js"><link rel="prefetch" href="/docs/assets/js/21.b4e831fa.js"><link rel="prefetch" href="/docs/assets/js/22.243f8c8f.js"><link rel="prefetch" href="/docs/assets/js/23.7addb889.js"><link rel="prefetch" href="/docs/assets/js/24.ef0496a7.js"><link rel="prefetch" href="/docs/assets/js/25.89b549f4.js"><link rel="prefetch" href="/docs/assets/js/26.0a614c82.js"><link rel="prefetch" href="/docs/assets/js/27.c737aa41.js"><link rel="prefetch" href="/docs/assets/js/28.1e6bd7b4.js"><link rel="prefetch" href="/docs/assets/js/29.3f95441b.js"><link rel="prefetch" href="/docs/assets/js/3.640e72c3.js"><link rel="prefetch" href="/docs/assets/js/30.778c4be0.js"><link rel="prefetch" href="/docs/assets/js/31.7bb18d07.js"><link rel="prefetch" href="/docs/assets/js/32.ace851f7.js"><link rel="prefetch" href="/docs/assets/js/33.80a8af0e.js"><link rel="prefetch" href="/docs/assets/js/34.d85fff39.js"><link rel="prefetch" href="/docs/assets/js/35.3adf9801.js"><link rel="prefetch" href="/docs/assets/js/36.9a107e60.js"><link rel="prefetch" href="/docs/assets/js/37.6d5ed231.js"><link rel="prefetch" href="/docs/assets/js/38.d4773946.js"><link rel="prefetch" href="/docs/assets/js/39.1f25f111.js"><link rel="prefetch" href="/docs/assets/js/4.6fcba847.js"><link rel="prefetch" href="/docs/assets/js/40.a7c7edfd.js"><link rel="prefetch" href="/docs/assets/js/41.6c906a58.js"><link rel="prefetch" href="/docs/assets/js/42.19af8c9b.js"><link rel="prefetch" href="/docs/assets/js/43.c3501ba2.js"><link rel="prefetch" href="/docs/assets/js/44.095b6352.js"><link rel="prefetch" href="/docs/assets/js/45.f712c735.js"><link rel="prefetch" href="/docs/assets/js/46.ea4a5f90.js"><link rel="prefetch" href="/docs/assets/js/47.4c923c28.js"><link rel="prefetch" href="/docs/assets/js/49.4c0fc68d.js"><link rel="prefetch" href="/docs/assets/js/5.5755b19e.js"><link rel="prefetch" href="/docs/assets/js/50.a768c789.js"><link rel="prefetch" href="/docs/assets/js/51.9145a08d.js"><link rel="prefetch" href="/docs/assets/js/52.bea51864.js"><link rel="prefetch" href="/docs/assets/js/53.d24412c9.js"><link rel="prefetch" href="/docs/assets/js/54.cd9f37d4.js"><link rel="prefetch" href="/docs/assets/js/55.a856d50b.js"><link rel="prefetch" href="/docs/assets/js/56.b3072981.js"><link rel="prefetch" href="/docs/assets/js/57.e9c27eb6.js"><link rel="prefetch" href="/docs/assets/js/58.a94f49c6.js"><link rel="prefetch" href="/docs/assets/js/59.76707aea.js"><link rel="prefetch" href="/docs/assets/js/6.c1859e2f.js"><link rel="prefetch" href="/docs/assets/js/60.79251db4.js"><link rel="prefetch" href="/docs/assets/js/61.742230c8.js"><link rel="prefetch" href="/docs/assets/js/62.ca1bb933.js"><link rel="prefetch" href="/docs/assets/js/63.75830b2e.js"><link rel="prefetch" href="/docs/assets/js/64.243cb0d7.js"><link rel="prefetch" href="/docs/assets/js/7.d29ddd45.js"><link rel="prefetch" href="/docs/assets/js/vendors~docsearch.d97d6166.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.1dac2540.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">DiscuzQ 安装文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="https://discuzq.icu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  返回
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="https://discuzq.icu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  返回
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>安装</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/安装/Windows 主机.html" class="sidebar-link">Windows 主机安装</a></li><li><a href="/docs/安装/Linux 主机.html" class="sidebar-link">Linux 主机安装</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>使用</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>配置</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>升级和转换</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>关于</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="二次开发部署"><a href="#二次开发部署" class="header-anchor">#</a> 二次开发部署</h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <p>本文将针对 Discuz! Q 二次开发的开发环境及代码部署进行说明。</p> <h2 id="环境配置"><a href="#环境配置" class="header-anchor">#</a> 环境配置</h2> <p>开发环境使用 Nginx 1.18.0 、PHP 7.3.23 、CentOS 7.6 版本为例。详情参见：<a href="https://discuz.com/docs/Linux%20%E4%B8%BB%E6%9C%BA.html#nginx" target="_blank" rel="noopener noreferrer">基于手动配置的 Nginx 环境<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h2 id="代码部署"><a href="#代码部署" class="header-anchor">#</a> 代码部署</h2> <p>Discuz! Q 开源主仓库共有4个，若要 fork 仓库进行手动部署，则需要组合四个仓库的代码。详情如下：</p> <div class="language- extra-class"><pre class="language-text"><code>Discuz-Q: git@gitee.com:Discuz/Discuz-Q.git  #Discuz! Q 后端主程序
+Discuz-Q-Framework:  git@gitee.com:Discuz/Discuz-Q-Framework.git #Discuz! Q后端抽象类程序
+Discuz-Q-uniapp: git@gitee.com:Discuz/Discuz-Q-uniapp.git  #Discuz! Q H5及小程序代码
+Discuz-Q-Web: git@gitee.com:Discuz/Discuz-Q-Web.git   #Discuz! Q PC端代码
+</code></pre></div><p>首次部署执行以下命令：</p> <div class="language- extra-class"><pre class="language-text"><code>git clone git@gitee.com:Discuz/Discuz-Q.git dzq-dev
+cd dzq-dev
+git clone  git@gitee.com:Discuz/Discuz-Q-Framework.git 
+framework
+</code></pre></div><p>在 <code>dzq-dev</code> 目录中新增 <code>public_1</code> 与 <code>public_2</code>两个文件夹，并在设置如下值：</p> <ul><li><code>public_1</code> 中新增 <code>skin.conf</code> 文件并写入 <code>1</code> 值到文件中。</li> <li><code>public_2</code> 中新增 <code>skin.conf</code> 文件并写入 <code>2</code> 值到文件中。</li></ul> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>安装项目依赖前必须安装 composer ,您可以使用命令 <code>composer install</code> 进行安装。</p></div> <p>使用 <code>cd ../</code> 回到 <code>dzq-dev</code> 同级目录，使用 <code>clone</code> 命令拉取前端代码。</p> <div class="language- extra-class"><pre class="language-text"><code>git clone  git@gitee.com:Discuz/Discuz-Q-uniapp discuz-uniapp
+git clone  git@gitee.com:Discuz/Discuz-Q-Web.git discuz-web
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>以下的脚本执行需要安装 npm 环境。</p></div> <p>把以下脚本内容复制到 back.sh 文件中。</p> <div class="language- extra-class"><pre class="language-text"><code>#!/bin/bash
+export PATH=$PATH:/usr/local/bin
+
+BASE=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &gt;/dev/null 2&gt;&amp;1 &amp;&amp; pwd )&quot;
+
+cd $BASE/dzq-dev
+git pull origin master
+
+cd $BASE/dzq-dev/framework
+git pull origin master
+
+cd $BASE/dzq-dev/resources/frame
+
+npm install
+npm run build-admin
+npm run build-admin:pay
+
+rm -rf $BASE/dzq-dev/public_2/static-admin
+cp -r $BASE/dzq-dev/public_pay/* $BASE/dzq-dev/public_2/ 
+
+rm -rf $BASE/dzq-dev/public_1/static-admin
+cp -r $BASE/dzq-dev/public/static-admin $BASE/dzq-dev/public_1/
+cp  $BASE/dzq-dev/public/admin.html $BASE/dzq-dev/public_1/
+</code></pre></div><p>把以下脚本内容复制到 H5.sh 文件中。</p> <div class="language- extra-class"><pre class="language-text"><code>#!/bin/bash
+export PATH=$PATH:/usr/local/bin
+
+BASE=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &gt;/dev/null 2&gt;&amp;1 &amp;&amp; pwd )&quot;
+
+cd $BASE/discuz-uniapp
+git pull origin master
+
+npm install
+echo ============build h5====================
+npm run build:h5
+echo ============build h5 play===============
+npm run build:h5-play
+
+echo =============delete static====================
+rm -rf $BASE/dzq-dev/public/static 
+rm -rf $BASE/dzq-dev/public_1/static
+rm -rf $BASE/dzq-dev/public_2/static
+
+echo ============copy dist to public===============
+cp -r $BASE/discuz-uniapp/dist/build/h5/* $BASE/dzq-dev/public/ 
+cp -r $BASE/discuz-uniapp/dist/build/h5/* $BASE/dzq-dev/public_1/
+cp -r $BASE/discuz-uniapp/dist/build/h5-play/* $BASE/dzq-dev/public_2/
+</code></pre></div><p>把以下脚本内容复制到 pc.sh 文件中。</p> <div class="language- extra-class"><pre class="language-text"><code>#!/bin/bash
+export PATH=$PATH:/usr/local/bin
+
+BASE=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &gt;/dev/null 2&gt;&amp;1 &amp;&amp; pwd )&quot;
+cd $BASE/discuz-web/
+git pull origin master
+
+npm install
+npm run  build:spa
+rm -rf $BASE/dzq-dev/public/invite 
+rm -rf $BASE/dzq-dev/public/manage
+rm -rf $BASE/dzq-dev/public/modify
+rm -rf $BASE/dzq-dev/public/my
+rm -rf $BASE/dzq-dev/public/_nuxt
+rm -rf $BASE/dzq-dev/public/site
+rm -rf $BASE/dzq-dev/public/thread
+rm -rf $BASE/dzq-dev/public/topic
+rm -rf $BASE/dzq-dev/public/user
+mv dist/index.html dist/pc.html
+cp -r $BASE/discuz-web/dist/* $BASE/dzq-dev/public/
+rm -rf $BASE/dzq-dev/public_1/invite
+rm -rf $BASE/dzq-dev/public_1/manage
+rm -rf $BASE/dzq-dev/public_1/modify
+rm -rf $BASE/dzq-dev/public_1/my
+rm -rf $BASE/dzq-dev/public_1/_nuxt
+rm -rf $BASE/dzq-dev/public_1/site
+rm -rf $BASE/dzq-dev/public_1/thread
+rm -rf $BASE/dzq-dev/public_1/topic
+rm -rf $BASE/dzq-dev/public_1/user
+cp -r $BASE/discuz-web/dist/* $BASE/dzq-dev/public_1/
+rm -rf $BASE/discuz-web/dist
+cd $BASE/discuz-web/
+npm run  build:pay-spa
+rm -rf $BASE/dzq-dev/public_2/invite
+rm -rf $BASE/dzq-dev/public_2/manage
+rm -rf $BASE/dzq-dev/public_2/modify
+rm -rf $BASE/dzq-dev/public_2/my
+rm -rf $BASE/dzq-dev/public_2/_nuxt
+rm -rf $BASE/dzq-dev/public_2/site
+rm -rf $BASE/dzq-dev/public_2/thread
+rm -rf $BASE/dzq-dev/public_2/topic
+rm -rf $BASE/dzq-dev/public_2/user
+mv dist/index.html dist/pc.html
+cp -r $BASE/discuz-web/dist/* $BASE/dzq-dev/public_2/
+rm -rf $BASE/discuz-web/dist
+</code></pre></div><p>把以上三个脚本文件<code>back.sh</code>、<code>H5.sh</code>、<code>pc.sh</code> 放置与 <code>dzq-dev</code> 文件同级目录下，并分别执行：</p> <div class="language- extra-class"><pre class="language-text"><code>sh back.sh
+sh H5.sh
+sh pc.sh
+</code></pre></div><p>构建并组合好所有的代码后，需使用 <code>git clone git@gitee.com:Discuz/Discuz-Q-Update.git</code> 下载命令执行文件。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>若无权限，则需要从官方提供的安装包中，安装包 <code>/app/Console/Commands/Upgrades/</code> 目录下复制所有的文件到项目目录<code>/app/Console/Commands/Upgrades/</code>下。</p></div> <p>此处就已完成全部代码整合，配置好 Nginx 服务后访问 <code>https://域名/install</code> 即可安装站点。</p> <div class="custom-block danger"><p class="custom-block-title">DANGER</p> <p>首次安装后，再次升级时，只需要执行 <code>back.sh</code>、<code>pc.sh</code>、<code>H5.sh</code>即可。数据迁移查看每个版本的命令，详情参见：
+<a href="https://discuz.com/docs/%E5%B8%B8%E8%A7%84%E9%83%A8%E7%BD%B2%E5%8D%87%E7%BA%A7.html#%E6%89%8B%E5%8A%A8%E5%8D%87%E7%BA%A7%E6%96%B9%E5%BC%8F" target="_blank" rel="noopener noreferrer">手动升级方式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.4a94bff3.js" defer></script><script src="/docs/assets/js/2.65b3c0ea.js" defer></script><script src="/docs/assets/js/1.93f47670.js" defer></script><script src="/docs/assets/js/48.a2893909.js" defer></script>
+  </body>
+</html>

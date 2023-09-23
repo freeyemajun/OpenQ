@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常规部署方式升级 | DiscuzQ 安装文档</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        console.log("ready");
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && isChrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                var element_to_scroll_to = document.getElementById(decodeURI(hash.substr(1)));
+                element_to_scroll_to.scrollIntoView();
+            }, 300);
+        }
+      });
+</script>
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.1dac2540.css" as="style"><link rel="preload" href="/docs/assets/js/app.4a94bff3.js" as="script"><link rel="preload" href="/docs/assets/js/2.65b3c0ea.js" as="script"><link rel="preload" href="/docs/assets/js/1.93f47670.js" as="script"><link rel="preload" href="/docs/assets/js/36.9a107e60.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.e303b1fe.js"><link rel="prefetch" href="/docs/assets/js/11.caa9adf9.js"><link rel="prefetch" href="/docs/assets/js/12.f47f63d5.js"><link rel="prefetch" href="/docs/assets/js/13.93dc81ea.js"><link rel="prefetch" href="/docs/assets/js/14.704d1a26.js"><link rel="prefetch" href="/docs/assets/js/15.2330e6dc.js"><link rel="prefetch" href="/docs/assets/js/16.6aaa40a5.js"><link rel="prefetch" href="/docs/assets/js/17.e32a5229.js"><link rel="prefetch" href="/docs/assets/js/18.1fa05986.js"><link rel="prefetch" href="/docs/assets/js/19.53f57844.js"><link rel="prefetch" href="/docs/assets/js/20.864577f6.js"><link rel="prefetch" href="/docs/assets/js/21.b4e831fa.js"><link rel="prefetch" href="/docs/assets/js/22.243f8c8f.js"><link rel="prefetch" href="/docs/assets/js/23.7addb889.js"><link rel="prefetch" href="/docs/assets/js/24.ef0496a7.js"><link rel="prefetch" href="/docs/assets/js/25.89b549f4.js"><link rel="prefetch" href="/docs/assets/js/26.0a614c82.js"><link rel="prefetch" href="/docs/assets/js/27.c737aa41.js"><link rel="prefetch" href="/docs/assets/js/28.1e6bd7b4.js"><link rel="prefetch" href="/docs/assets/js/29.3f95441b.js"><link rel="prefetch" href="/docs/assets/js/3.640e72c3.js"><link rel="prefetch" href="/docs/assets/js/30.778c4be0.js"><link rel="prefetch" href="/docs/assets/js/31.7bb18d07.js"><link rel="prefetch" href="/docs/assets/js/32.ace851f7.js"><link rel="prefetch" href="/docs/assets/js/33.80a8af0e.js"><link rel="prefetch" href="/docs/assets/js/34.d85fff39.js"><link rel="prefetch" href="/docs/assets/js/35.3adf9801.js"><link rel="prefetch" href="/docs/assets/js/37.6d5ed231.js"><link rel="prefetch" href="/docs/assets/js/38.d4773946.js"><link rel="prefetch" href="/docs/assets/js/39.1f25f111.js"><link rel="prefetch" href="/docs/assets/js/4.6fcba847.js"><link rel="prefetch" href="/docs/assets/js/40.a7c7edfd.js"><link rel="prefetch" href="/docs/assets/js/41.6c906a58.js"><link rel="prefetch" href="/docs/assets/js/42.19af8c9b.js"><link rel="prefetch" href="/docs/assets/js/43.c3501ba2.js"><link rel="prefetch" href="/docs/assets/js/44.095b6352.js"><link rel="prefetch" href="/docs/assets/js/45.f712c735.js"><link rel="prefetch" href="/docs/assets/js/46.ea4a5f90.js"><link rel="prefetch" href="/docs/assets/js/47.4c923c28.js"><link rel="prefetch" href="/docs/assets/js/48.a2893909.js"><link rel="prefetch" href="/docs/assets/js/49.4c0fc68d.js"><link rel="prefetch" href="/docs/assets/js/5.5755b19e.js"><link rel="prefetch" href="/docs/assets/js/50.a768c789.js"><link rel="prefetch" href="/docs/assets/js/51.9145a08d.js"><link rel="prefetch" href="/docs/assets/js/52.bea51864.js"><link rel="prefetch" href="/docs/assets/js/53.d24412c9.js"><link rel="prefetch" href="/docs/assets/js/54.cd9f37d4.js"><link rel="prefetch" href="/docs/assets/js/55.a856d50b.js"><link rel="prefetch" href="/docs/assets/js/56.b3072981.js"><link rel="prefetch" href="/docs/assets/js/57.e9c27eb6.js"><link rel="prefetch" href="/docs/assets/js/58.a94f49c6.js"><link rel="prefetch" href="/docs/assets/js/59.76707aea.js"><link rel="prefetch" href="/docs/assets/js/6.c1859e2f.js"><link rel="prefetch" href="/docs/assets/js/60.79251db4.js"><link rel="prefetch" href="/docs/assets/js/61.742230c8.js"><link rel="prefetch" href="/docs/assets/js/62.ca1bb933.js"><link rel="prefetch" href="/docs/assets/js/63.75830b2e.js"><link rel="prefetch" href="/docs/assets/js/64.243cb0d7.js"><link rel="prefetch" href="/docs/assets/js/7.d29ddd45.js"><link rel="prefetch" href="/docs/assets/js/vendors~docsearch.d97d6166.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.1dac2540.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">DiscuzQ 安装文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="https://discuzq.icu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  返回
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="https://discuzq.icu" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  返回
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>安装</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>使用</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>配置</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>升级和转换</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/升级/常规部署升级.html" class="active sidebar-link">常规部署方式升级</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/升级/常规部署升级.html#使用-dl-php-自动升级方式-推荐" class="sidebar-link">使用 dl.php 自动升级方式（推荐）</a></li><li class="sidebar-sub-header"><a href="/docs/升级/常规部署升级.html#手动升级方式" class="sidebar-link">手动升级方式</a></li></ul></li><li><a href="/docs/升级/镜像部署方式升级.html" class="sidebar-link">镜像部署方式升级</a></li><li><a href="/docs/升级/Docker 部署方式升级.html" class="sidebar-link">Docker容器部署方式升级</a></li><li><a href="/docs/升级/小程序的升级.html" class="sidebar-link">微信小程序升级</a></li><li><a href="/docs/升级/Discuzto.html" class="sidebar-link">Discuz! X3.4 转换 Discuz! Q</a></li><li><a href="/docs/升级/本地数据迁移.html" class="sidebar-link">本地数据迁移 COS</a></li><li><a href="/docs/升级/站点接入 CDN.html" class="sidebar-link">站点接入 CDN</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>关于</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="常规部署方式升级"><a href="#常规部署方式升级" class="header-anchor">#</a> 常规部署方式升级</h1> <h2> 概述</h2> <p>本文档将指导您如何升级使用常规部署方式的 Discuz! Q 。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>常规部署方式升级，适用于：基于手动配置的环境、基于宝塔、基于镜像部署方式。</p></div> <h2>  前提条件</h2> <p>已使用基于手动配置的环境、基于宝塔、基于镜像部署方式部署 Discuz! Q。</p> <h2> 操作指南</h2> <p>常规部署方式支持以下两种升级方式，您可以根据您的具体需求进行选择。</p> <h2 id="使用-dl-php-自动升级方式-推荐"><a href="#使用-dl-php-自动升级方式-推荐" class="header-anchor">#</a> 使用 dl.php 自动升级方式（推荐）</h2> <ol><li>使用浏览器访问 <code>http(s)://&lt;已安装部署成功的网址&gt;/dl.php</code> ,如官网 <code>https://discuz.chat</code> 则为 <code>https://discuz.chat/dl.php</code> 。如下图所示：
+<img src="https://main.qcloudimg.com/raw/2d3ecf300f7807d3ae265c300f706293.png" alt=""></li></ol> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li><p>如果左上角 Logo 处没有版本号信息，请下载并替换最新版本的 <a href="https://discuzq-docs-1258344699.cos.ap-guangzhou.myqcloud.com/dl.php" target="_blank" rel="noopener noreferrer">安装工具<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，将下载的 <code>dl.php</code> 文件放置于 <code>public</code> 目录下。</p></li> <li><p>为了安全，<code>dl.php</code> 每次运行完成后，会在其所在目录下生成 <code>dl.php.lock</code> 锁文件，升级前请先删除此文件。<code>dl.php.lock</code>位于<code>public</code>目录下。</p></li></ul></div> <ol start="2"><li>单击【下一步】，Discuz! Q 将会对升级进行检查，检查成功后，在计划安装版本页面，选择需要升级的版本。如下图所示：</li></ol> <p><img src="https://main.qcloudimg.com/raw/f1936d438b708483659ab95caa1744a4.png" alt=""></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>选择下载的版本号必须大于当前安装版本号 ，否则无法继续。</li> <li>默认勾选【升级前删除原来的静态文件目录】，可根据实际需求进行选择。</li></ul></div> <ol start="3"><li>单击【下一步】, Discuz! Q 将会自动执行升级。升级成功将会提示以下信息。如下图所示：</li></ol> <p><img src="https://main.qcloudimg.com/raw/d01c06ff8ed24625cd882866c7da5295.png" alt=""></p> <ol start="4"><li>单击下一步完成升级。</li></ol> <h2 id="手动升级方式"><a href="#手动升级方式" class="header-anchor">#</a> 手动升级方式</h2> <p>手动升级版本方式请根据您的现有版本与所需升级到的版本进行选择：</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>以下操作以使用 Nginx 服务为例。如您使用其他 Web 服务，建议您使用自动升级方式，或参考以下操作进行升级。</li> <li>以下升级命令需按从上至下依次执行，否则将可能导致升级失败。</li></ul></div> <h4 id="升级到v3-0-210926"><a href="#升级到v3-0-210926" class="header-anchor">#</a> 升级到v3.0.210926</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco init:activity
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210917"><a href="#升级到v3-0-210917" class="header-anchor">#</a> 升级到v3.0.210917</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:issue_at
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210902"><a href="#升级到v3-0-210902" class="header-anchor">#</a> 升级到v3.0.210902</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:removeNicknameBlank
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210819"><a href="#升级到v3-0-210819" class="header-anchor">#</a> 升级到v3.0.210819</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:addVotePermission
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210729"><a href="#升级到v3-0-210729" class="header-anchor">#</a> 升级到v3.0.210729</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:nicknameDuplicateRemoval
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210715"><a href="#升级到v3-0-210715" class="header-anchor">#</a> 升级到v3.0.210715</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco notifications:migration
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210713"><a href="#升级到v3-0-210713" class="header-anchor">#</a> 升级到v3.0.210713</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:stopWordsNicknameSet
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210706"><a href="#升级到v3-0-210706" class="header-anchor">#</a> 升级到v3.0.210706</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco postForeignKey:update
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210628"><a href="#升级到v3-0-210628" class="header-anchor">#</a> 升级到v3.0.210628</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:addUnpaidPermission
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v3-0-210609"><a href="#升级到v3-0-210609" class="header-anchor">#</a> 升级到v3.0.210609</h4> <ol><li>在终端中，进入您的 discuz 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:upgradeOldPermissionData
+php disco upgrade:nicknameSet
+php disco upgrade:bindType
+php disco upgrade:questionMigration
+php disco upgrade:noticeAdd
+php disco thread:migration
+</code></pre></div><ol start="2"><li>修改您的网站主目录配置文件 <code>config.php</code>, 查找字段 <code>'disks' =&gt;</code>的配置项添加如下内容：</li></ol> <div class="language- extra-class"><pre class="language-text"><code> 'background' =&gt;[
+                    'driver'    =&gt;  'local',
+                    'root'    =&gt;  storage_path('app/public/background'),
+                    'url'    =&gt;  'background',
+                    'visibility'    =&gt;  'public',
+                ],
+'background_cos' =&gt; [
+                    'driver' =&gt; 'cos',
+                    'root' =&gt; storage_path('app/public/background'),
+                    'url' =&gt; 'background',
+                    'visibility' =&gt; 'public',
+                ]
+</code></pre></div><ol start="3"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-3-210528"><a href="#升级到v2-3-210528" class="header-anchor">#</a> 升级到v2.3.210528</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:noticeAdd
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-3-210412"><a href="#升级到v2-3-210412" class="header-anchor">#</a> 升级到v2.3.210412</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:noticeAdd
+php disco upgrade:noticeIteration
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-3-210207"><a href="#升级到v2-3-210207" class="header-anchor">#</a> 升级到v2.3.210207</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令即可完成升级。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:notice
+php disco upgrade:notice-iteration
+php disco upgrade:groupPermissionAdd
+php disco upgrade:settingAdd
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>升级成功前如您已设置为红色主题，升级成功后将默认回退为蓝色主题，您需在 Discuz! Q 管理后台重新设置为红色主题。</p></div> <h4 id="升级到v2-3-210202"><a href="#升级到v2-3-210202" class="header-anchor">#</a> 升级到v2.3.210202</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:notice
+php disco upgrade:notice-iteration
+php disco upgrade:groupPermissionAdd
+php disco upgrade:settingAdd
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-1-201113"><a href="#升级到v2-1-201113" class="header-anchor">#</a> 升级到v2.1.201113</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:split-permissions
+php disco site:switch
+</code></pre></div><ol start="2"><li>修改您的 Nginx 配置文件 <code>nginx.conf</code> 的 <code>index</code> 配置项，修改为以下参数。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>index index.php index.html;
+</code></pre></div><ol start="3"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-1-201029"><a href="#升级到v2-1-201029" class="header-anchor">#</a> 升级到v2.1.201029</h4> <ol><li>在终端中，进入您的 discuz 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:notice
+</code></pre></div><ol start="2"><li>修改网站主目录下的 <code>config.php</code> 配置文件, 查找字段 <code>'providers' =&gt;</code>的配置修改为以下内容：</li></ol> <div class="language- extra-class"><pre class="language-text"><code> 'providers' =&gt; [
+        App\Formatter\FormatterServiceProvider::class,
+        App\Passport\Oauth2ServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AttachmentServiceProvider::class,
+        App\Providers\CategoryServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\OrderServiceProvider::class,
+        App\Providers\PostServiceProvider::class,
+        App\Providers\SettingsServiceProvider::class,
+        App\Providers\ThreadServiceProvider::class,
+        App\Providers\UserServiceProvider::class,
+        App\Providers\DialogMessageServiceProvider::class,
+        App\Providers\QuestionServiceProvider::class,
+    ],
+</code></pre></div><ol start="3"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v2-0-201001、v1-0-200911、v1-0-200821、v1-0-200806、v1-0-200723、v1-0-200715、v1-0-200707、v1-0-200705、v0-5-200522、v0-5-200424"><a href="#升级到v2-0-201001、v1-0-200911、v1-0-200821、v1-0-200806、v1-0-200723、v1-0-200715、v1-0-200707、v1-0-200705、v0-5-200522、v0-5-200424" class="header-anchor">#</a> 升级到v2.0.201001、v1.0.200911、v1.0.200821、v1.0.200806、v1.0.200723、v1.0.200715、v1.0.200707、v1.0.200705、v0.5.200522、v0.5.200424</h4> <ol><li>在终端中，进入您的 discuz 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v1-0-200710"><a href="#升级到v1-0-200710" class="header-anchor">#</a> 升级到v1.0.200710</h4> <p>1.需配置PHP，启用 <code>exif</code> 扩展。</p> <ol start="2"><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+</code></pre></div><ol start="3"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v1-0-200703"><a href="#升级到v1-0-200703" class="header-anchor">#</a> 升级到v1.0.200703</h4> <ol><li>修改 Web 服务配置，修改内容请查看：<a href="https://discuz.com/docs/Linux%20%E4%B8%BB%E6%9C%BA.html#nginx" target="_blank" rel="noopener noreferrer">Ngnix服务<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</li> <li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+php disco upgrade:category-permission 
+php disco upgrade:videoSize
+php disco upgrade:notice
+</code></pre></div><ol start="3"><li>修改网站主目录下的 <code>config.php</code> 配置文件，将字段 <code>'providers' =&gt;</code> 的配置项修改为以下内容：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>'providers' =&gt; [
+    App\Formatter\FormatterServiceProvider::class,
+    App\Passport\Oauth2ServiceProvider::class,
+    App\Providers\AppServiceProvider::class,
+    App\Providers\AttachmentServiceProvider::class,
+    App\Providers\CategoryServiceProvider::class,
+    App\Providers\EventServiceProvider::class,
+    App\Providers\OrderServiceProvider::class,
+    App\Providers\PostServiceProvider::class,
+    App\Providers\SettingsServiceProvider::class,
+    App\Providers\ThreadServiceProvider::class,
+    App\Providers\UserServiceProvider::class,
+    App\Providers\DialogMessageServiceProvider::class,
+],
+</code></pre></div><ol start="4"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v0-5-200508"><a href="#升级到v0-5-200508" class="header-anchor">#</a> 升级到v0.5.200508</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>如果运行以上脚本时出现错误，请下载<a href="https://discuzq-docs-1258344699.cos.ap-guangzhou.myqcloud.com/2020_04_14_104730_update_users_table.php" target="_blank" rel="noopener noreferrer">此文件<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，替换 <code>discuz</code> 主目录下的 <code>database/migrations</code> 目录下的同名文件，然后再次执行 <code>php disco migrate --force</code>.</p></div> <h4 id="升级到v0-5-200410"><a href="#升级到v0-5-200410" class="header-anchor">#</a> 升级到v0.5.200410</h4> <ol><li><p>附件图片统一接入对象存储服务后，需要重新配置”后台-全局-腾讯云设置-对象存储“中的“访问域名”。访问域名获取方式为：“腾讯云-对象存储-存储桶列表-配置管理-基本配置”中的“访问域名”（详见<a href="https://dl.discuz.chat/dzq_userguide_latest.pdf" target="_blank" rel="noopener noreferrer">使用手册<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>“2.2.7.6对象存储”部分说明）。</p></li> <li><p>修改网站主目录下的 <code>config.php</code> 配置文件，将字段 <code>attachment</code> 修改为以下配置：</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>'attachment' =&gt; [
+</code></pre></div><p>修改为：</p> <div class="language- extra-class"><pre class="language-text"><code>'attachment_cos' =&gt; [
+</code></pre></div><p>并在此配置之前加入以下配置：</p> <div class="language- extra-class"><pre class="language-text"><code>'attachment' =&gt; [
+    'driver' =&gt; 'local',
+    'root'   =&gt; storage_path('app'),
+    'url'    =&gt; 'attachment'
+],
+</code></pre></div><p>最终配置如下所示：</p> <div class="language- extra-class"><pre class="language-text"><code>'attachment' =&gt; [
+    'driver' =&gt; 'local',
+    'root'   =&gt; storage_path('app'),
+    'url'    =&gt; 'attachment'
+],
+'attachment_cos' =&gt; [
+    'driver' =&gt; 'cos',
+    'root'   =&gt; storage_path('app/public/attachment'),
+    'url'    =&gt; 'attachment'
+],
+</code></pre></div><ol start="3"><li>重启 Nignx 服务即可完成升级。</li></ol> <h4 id="升级到v0-4-200331"><a href="#升级到v0-4-200331" class="header-anchor">#</a> 升级到v0.4.200331</h4> <p>按 v0.4.200331 升级的要求完成数据库升级和配置文件修改即可完成升级。</p> <h4 id="从任意版本升级到-v0-4-200331"><a href="#从任意版本升级到-v0-4-200331" class="header-anchor">#</a> 从任意版本升级到 v0.4.200331</h4> <ol><li>在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+</code></pre></div><ol start="2"><li>修改网站主目录下的 <code>config.php</code> 配置文件，在<code>attachment</code>字段之前，加入以下配置：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>'avatar_cos' =&gt; [
+  'driver' =&gt; 'cos',
+  'root' =&gt; storage_path('app/public/avatars'),
+  'url' =&gt; 'avatar',
+  'visibility' =&gt; 'public',
+],
+
+</code></pre></div><h4 id="从任意版本升级到-v0-4-200327"><a href="#从任意版本升级到-v0-4-200327" class="header-anchor">#</a> 从任意版本升级到 v0.4.200327</h4> <ol><li>需要在完成以上步骤后，在终端中，进入您的 <code>discuz</code> 的主目录并运行以下命令:、</li></ol> <div class="language- extra-class"><pre class="language-text"><code>php disco migrate --force
+</code></pre></div><ol start="2"><li>重启 Nignx 服务即可完成升级。</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/配置/其他服务设置.html" class="prev">
+        其他服务设置
+      </a></span> <span class="next"><a href="/docs/升级/镜像部署方式升级.html">
+        镜像部署方式升级
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.4a94bff3.js" defer></script><script src="/docs/assets/js/2.65b3c0ea.js" defer></script><script src="/docs/assets/js/1.93f47670.js" defer></script><script src="/docs/assets/js/36.9a107e60.js" defer></script>
+  </body>
+</html>
